@@ -20,6 +20,8 @@ celtic:
   sex: Robot
   interested_in: Friends
   admin: true
+  activated: true
+  activated_at: <%= Time.zone.now %>
 
 angel:
   first_name: Angel
@@ -43,3 +45,5 @@ angel:
   sex: Female
   interested_in: Friends
   admin: false
+  activated: true
+  activated_at: <%= Time.zone.now %>
