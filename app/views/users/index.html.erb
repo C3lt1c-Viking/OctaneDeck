@@ -1,22 +1,28 @@
 <% provide(:title, 'All users') %>
 
-<ul class="users" style="background-color: rgba(0,0,0,0.8); border: 5px solid #0F0; box-shadow: 10px 10px 15px #00F;">
-  <h1 class="users_title">Registered Decks</h1>
-  <%= will_paginate %>
-  <% @users.each do |user| %>
-    <li>
-      <% if user.avatar.attached? %>
-        <%= image_tag user.avatar, style: 'width: 95px; height: 95px; border-radius: 75%', alt: user.username %>
-      <% else %>
-        <%= image_tag('crypto.jpg', style: 'width: 95px; height: 95px; border-radius: 75%', alt: 'Profile Image') %>
-      <% end %>
-      <%= link_to user.username, user, id: 'show_user_uname' %>
-      <% if current_user.admin? && !current_user?(user) %>
-        | <%= link_to "delete", user, data: { "turbo-method": :delete,
-                                              turbo_confirm: "You sure?" } %>
-      <% end %>
-
-    </li>
-  <% end %>
-  <%= will_paginate %>
-</ul>
+<main role="main" style="margin-top: 35px;">
+  <div class="jumbotron" id="hme_box_theme">
+    <div class="container">
+      <h1 class="display-3" id="hme_box_text">Registered Decks:</h1>
+      <ul>
+        <%= will_paginate %>
+        <% @users.each do |user| %>
+          <li>
+            <% if user.avatar.attached? %>
+              <%= image_tag user.avatar, style: 'width: 95px; height: 95px', alt: user.username %><br/>
+              <br/>
+            <% else %>
+              <%= image_tag('crypto.jpg', style: 'width: 95px; height: 95px', alt: 'Profile Image') %><br/>
+              <br/>
+            <% end %>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <%= link_to user.username, user, id: 'show_user_uname', style: 'color: #000' %>&nbsp;&nbsp;&nbsp; <p id="show_user_uname" style="color: #000;">Followers: <%= user.followers.count %> &nbsp; &nbsp; Account Creation Date: <%= user.created_at.strftime('%b %d %y') %></p><br/>
+            <% if current_user.admin? && !current_user?(user) %>
+            <br/>
+            <%= link_to "delete", user, data: { "turbo-method": :delete, turbo_confirm: "You sure?" } %>
+            <% end %>
+            <hr>
+          </li>
+        <% end %>
+        <%= will_paginate %>
+      </ul>

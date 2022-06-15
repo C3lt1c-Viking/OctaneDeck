@@ -1,81 +1,81 @@
 <% provide(:title, "Edit user") %>
-<div class="row usr_box">
-  <h1 class="usr_banner">Deck Editor</h1>
+<div class="row" id="usr_box">
+  <h1 id="dec_editor_banner">Deck Editor</h1>
   <div class="col-md-6 col-md-offset-3">
     <%= form_with(model: @user) do |f| %>
     <%= render 'shared/error_messages', object: f.object %>
 
-     <%= f.label "Your Avatar:", class: 'usr_title' %>
-     <%= f.file_field :avatar, class: 'form-control usr_inp' %>
+     <%= f.label "Your Avatar:", id: 'usr_title' %>
+     <%= f.file_field :avatar, class: 'form-control', id: 'usr_inp' %>
 
-      <%= f.label "Your Banner:", class: 'usr_title' %>
-      <%= f.file_field :banner, class: 'form-control usr_inp' %>
+      <%= f.label "Your Banner:", id: 'usr_title' %>
+      <%= f.file_field :banner, class: 'form-control', id: 'usr_inp' %>
 
       <%= f.label 'First Name:', id: 'usr_title' %>
-      <%= f.text_field :first_name, class: 'form-control usr_inp' %>
+      <%= f.text_field :first_name, class: 'form-control', id: 'usr_inp' %>
 
       <%= f.label 'Last Name:', id: 'usr_title' %>
-      <%= f.text_field :last_name, class: 'form-control usr_inp', presence: false %>
+      <%= f.text_field :last_name, class: 'form-control', presence: false, id: 'usr_inp' %>
 
       <%= f.label 'Username:', id: 'usr_title' %>
-      <%= f.text_field :username, class: 'form-control usr_inp' %>
+      <%= f.text_field :username, class: 'form-control', id: 'usr_inp' %>
 
       <%= f.label 'Email:', id: 'usr_title' %>
-      <%= f.email_field :email, class: 'form-control usr_inp' %>
+      <%= f.email_field :email, class: 'form-control', id: 'usr_inp' %>
 
-      <%= f.label 'Hobbies:', id: 'usr_title' %>
-      <%= f.text_area :hobbies, size: '30x4', class: 'form-control usr_inp' %>
+      <%= f.label 'Bio:', id: 'usr_title' %>
+      <%= f.text_area :hobbies, size: '30x4', class: 'form-control', id: 'usr_inp' %>
 
       <%= f.label 'Job Title:', id: 'usr_title' %>
-      <%= f.text_field :job_title, class: 'form-control usr_inp' %>
+      <%= f.text_field :job_title, class: 'form-control', id: 'usr_inp' %>
 
       <%= f.label 'Company:', id: 'usr_title' %>
-      <%= f.text_field :job_company, class: 'form-control usr_inp' %>
+      <%= f.text_field :job_company, class: 'form-control', id: 'usr_inp' %>
 
       <%= f.label 'Highest Education:', id: 'usr_title' %>
-      <%= f.text_field :highest_education, class: 'form-control usr_inp' %>
+      <%= f.text_field :highest_education, class: 'form-control', id: 'usr_inp' %>
 
       <%= f.label 'Bitcoin Address:', id: 'usr_title' %>
-      <%= f.text_field :crypto_wallet_1, class: 'form-control usr_inp' %>
+      <%= f.text_field :crypto_wallet_1, class: 'form-control', id: 'usr_inp' %>
 
       <%= f.label 'Dogecoin Address:', id: 'usr_title' %>
-      <%= f.text_field :crypto_wallet_2, class: 'form-control usr_inp' %>
+      <%= f.text_field :crypto_wallet_2, class: 'form-control', id: 'usr_inp' %>
 
       <%= f.label 'Ethereum Address:', id: 'usr_title' %>
-      <%= f.text_field :crypto_wallet_3, class: 'form-control usr_inp' %>
+      <%= f.text_field :crypto_wallet_3, class: 'form-control', id: 'usr_inp' %>
 
       <%= f.label 'Facebook Page:', id: 'usr_title' %>
-      <%= f.url_field :facebook, class: 'form-control usr_inp' %>
+      <%= f.url_field :facebook, class: 'form-control', id: 'usr_inp' %>
 
       <%= f.label 'Twitter Page:', id: 'usr_title' %>
-      <%= f.text_field :twitter, class: 'form-control usr_inp' %>
+      <%= f.text_field :twitter, class: 'form-control', id: 'usr_inp' %>
 
       <%= f.label 'GitHub Page:', id: 'usr_title' %>
-      <%= f.url_field :github, class: 'form-control usr_inp' %>
+      <%= f.url_field :github, class: 'form-control', id: 'usr_inp' %>
 
       <%= f.label 'StackOverflow Page:', id: 'usr_title' %>
-      <%= f.url_field :stackoverflow, class: 'form-control usr_inp' %>
+      <%= f.url_field :stackoverflow, class: 'form-control', id: 'usr_inp' %>
 
       <%= f.label 'Other URL:', id: 'usr_title' %>
-      <%= f.url_field :other_site, class: 'form-control usr_inp' %>
+      <%= f.url_field :other_site, class: 'form-control', id: 'usr_inp' %>
 
       <%= f.label 'Phone Number:', id: 'usr_title' %>
-      <%= f.phone_field :cell, class: 'form-control usr_inp' %>
+      <%= f.phone_field :cell, class: 'form-control', id: 'usr_inp' %>
 
       <%= f.label 'Marital Status:', id: 'usr_title' %>
-      <%= f.select :marital_status, [' ','Married', 'Single', 'Widow', 'Divorce'], class: 'form-control usr_inp' %>
+      <%= f.select :marital_status, [' ','Married', 'Single', 'Widow', 'Divorce'], class: 'form-control', id: 'usr_inp' %>
 
       <%= f.label 'Humanoid Traits:', id: 'usr_title' %>
-      <%= f.select :sex, ['Male', 'Female', 'Alien', 'Robot'], class: 'form-control usr_inp' %>
+      <%= f.select :sex, ['Male', 'Female', 'Alien', 'Robot'], class: 'form-control', id: 'usr_inp' %>
 
       <%= f.label 'Interested In:', id: 'usr_title' %>
-      <%= f.select :interested_in, [' ', 'Friends', 'Relationship', 'Connecting', 'Learning', 'Career Growth'], class: 'form-control usr_inp' %>
+      <%= f.select :interested_in, [' ', 'Friends', 'Relationship', 'Connecting', 'Learning', 'Career Growth'], class: 'form-control', id: 'usr_inp' %>
 
       <%= f.label 'Password:', id: 'usr_title' %>
-      <%= f.password_field :password, class: 'form-control usr_inp'  %>
+      <%= f.password_field :password, class: 'form-control', id: 'usr_inp'  %>
 
       <%= f.label :password_confirmation, "Confirmation", id: 'usr_title' %>
-      <%= f.password_field :password_confirmation, class: 'form-control usr_inp', value: "" %>
+      <%= f.password_field :password_confirmation, class: 'form-control', value: "" , id: 'usr_inp'%>
 
       <%= f.submit "Save changes", class: "btn btn-primary" %>
     <% end %>

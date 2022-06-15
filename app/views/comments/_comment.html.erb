@@ -1,14 +1,13 @@
-<li style="background-color: #FFF;">
+<li>
+    <%= comment.content %>
 
-  <%= comment.content %>
-
-  <%= form_for [comment, Comment.new] do |f| %>
-      <%= f.text_area :content, placeholder: "Add a Reply" %><br/>
-      <%= f.submit "Reply"  %>
-      <% end %>
+    <%= form_for [comment, Comment.new] do |f| %>
+      <%= f.text_area :content, placeholder: "Reply to Comment!" %><br/>
+      <%= f.submit "Reply", class: 'btn btn-lg btn-primary'  %>
+    <% end %>
 
   <ul>
-      <%= render partial: 'comments/comment', collection: comment.comments %>
+    <%= render partial: 'comments/comment', collection: comment.comments %>
   </ul>
 
 </li>

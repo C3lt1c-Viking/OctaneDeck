@@ -41,7 +41,7 @@
               We value everyone's privacy. And we believe that where you are in the world, that
               is your business, not the governments, not the political campaigns, not even us!
             </p>
-            <%= link_to 'Access Your Deck', login_path, class: 'btn btn-lg btn-outline-success' %>
+            <%= link_to 'Access Your Deck', login_path, class: 'btn btn-lg btn-outline-danger' %>
           </div>
         </div>
       </div>
@@ -63,10 +63,8 @@
       By investing time &amp; resources into CryptoDeck, we are looking into "Tipping" each other
       with cryptocoins. Not all accounts will be subjected to this, and we will discuss this more in a few moments.
       On top of that, we also provide "Badges" for users as well to help promote each other!<br/>
-      And this is where we brought in another developer to assist in speeding up the process! With
-      another developer <%= link_to "(GhostKanyi)", 'https://twitter.com/ghostkanyi', target: '_blank', style: 'color: #00F;' %> on board, we have the ability to be able to create and publish
-      OctaneDeck much faster. Thus allowing users to be able to utilize our social media site as soon
-      as possible!
+      <b><u><i>Please Note: We will update this section as we have added new elements to OctaneDeck!<br/>
+        If you would like more details, or would like to connect with us, please email us <%= link_to "Here", "mailto:info@octanedeck.com", target: "_blank" %>!</i></u></b>
     </p>
   </div>
   <hr id="how-to_line-break">
@@ -87,36 +85,167 @@
                 Email <br/>
                 Password<br/>
                 And confirm your password too.<br/>
-                <i><strong>Please Note:</strong> You need a valid EMAIL for registration activation!</i>
+                Then your set!<br/>
+                <%= link_to 'Create Your New Deck', signup_path, class: 'btn btn-lg btn-outline-success', target: '_blank' %>
               </p>
             </div>
           </div>
         </div>
         <div class="col">
           <div class="card" style="width: 100%;">
-            <%= image_tag('coinbase.png', class: 'card-img-top', alt: 'Utilizing Blockchain Technologies!') %>
+            <%= image_tag('profile_page.png', class: 'card-img-top', alt: 'Deck Profile Page!') %>
             <div class="card-body" style="padding: 15px;">
-              <h5 class="card-title" id="how-to_card-title">Coinbase Technologies</h5>
+              <h5 class="card-title" id="how-to_card-title">Deck Profile Page!</h5>
               <hr>
               <p class="card-text" id="how-to_card-text">
-                Using Coinbase API keys in order to connect your wallets and be able to send/recieve
-                cryptocoins from inside your deck!
+                On your "Deck Profile Page" is where everyone can see content you have provided for the world to see!
+                You will also be able to see your feed, create posts, as well as see OctaneDeck updates! This is the
+                heart of OctaneDeck!
               </p>
-              <%= link_to 'Register Coinbase', 'https://accounts.coinbase.com/pick-your-account?origin=coinbase.com', class: 'btn btn-lg btn-outline-primary', target: '_blank' %>
+              <%= link_to 'Log Into Your Deck', login_path, class: 'btn btn-lg btn-outline-primary', target: '_blank' %>
             </div>
           </div>
         </div>
         <div class="col">
           <div class="card" style="width: 100%;">
-            <%= image_tag('privacy.jpg', class: 'card-img-top', alt: 'Social Media Privacy', style: 'height: 226px;') %>
+            <%= image_tag('deck_editor.png', class: 'card-img-top', alt: 'Deck Editor!', style: 'height: 226px;') %>
             <div class="card-body" style="padding: 15px;">
-              <h5 class="card-title" id="how-to_card-title">Privacy &amp; Anti-Tracking</h5>
+              <h5 class="card-title" id="how-to_card-title">Deck Editor Page!</h5>
               <hr>
               <p class="card-text" id="how-to_card-text">
-                We value everyone's privacy. And we believe that where you are in the world, that
-                is your business, not the governments, not the political campaigns, not even us!
+                Now you are fully capable of editing your desired details on our Deck Editor page!
+                You can include any external social media profiles you desire, add your cryptocoin address
+                as well as include your "Bio" section to your liking!
               </p>
-              <%= link_to 'Access Your Deck', login_path, class: 'btn btn-lg btn-outline-success' %>
+              <%= link_to 'Edit Your Deck', edit_user_path(current_user), class: 'btn btn-lg btn-outline-danger' %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr id="how-to_line-break">
+  <div class="container-xxl" id="how-to_vision-box">
+    <h1 id="how-to_vision-title">Find Freinds & Follow Others</h1><br/>
+    <div class="container">
+      <div class="row align-items-start">
+        <div class="col">
+          <div class="card" style="width: 100%;">
+            <%= image_tag('users_page.png', class: 'card-img-top', alt: 'Finding Other Deck Users!') %>
+            <div class="card-body" style="padding: 15px;">
+              <h5 class="card-title" id="how-to_card-title">View All Users!</h5>
+              <hr>
+              <p class="card-text" id="how-to_card-text">
+                Finding friends is rather easy now! Simply Log Into your deck, <br/>
+                Click on "Users" tab <br/>
+                Scroll until you find your friend!<br/>
+                You will notice a few things here, <br/>
+                User Avatar<br/>
+                User Username<br/>
+                User Followers<br/>
+                Account Creation<br/>
+                Once you have found your desired friend to follow, simply click on their username!<br/>
+                <%= link_to 'View Registered Decks', users_path, class: 'btn btn-lg btn-outline-success', target: '_blank' %>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card" style="width: 100%;">
+            <%= image_tag('follow_user.png', class: 'card-img-top', alt: 'Follow Deck Profile!') %>
+            <div class="card-body" style="padding: 15px;">
+              <h5 class="card-title" id="how-to_card-title">Following The User!</h5>
+              <hr>
+              <p class="card-text" id="how-to_card-text">
+                Now that you have clicked on your friends deck, you will notice the blue "Follow" button. If you click
+                on that button you will automatically be following said user!<br/>
+                And then when you do, you will be able to see what they post on your Decks Feed timeline!<br/>
+                The more friends &amp; family members you follow, the more your feed will be full! You can now
+                see all types of deck feeds from as many other users as you desire! You can follow people you do not
+                know, or follow only your friends &amp; family members! The choice is yours to make, just have fun, and connect.<br/>
+              </p>
+              <%= link_to 'Log Into Your Deck', login_path, class: 'btn btn-lg btn-outline-primary', target: '_blank' %>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card" style="width: 100%;">
+            <%= image_tag('deck_feed.png', class: 'card-img-top', alt: 'Deck Feed!', style: 'height: 226px;') %>
+            <div class="card-body" style="padding: 15px;">
+              <h5 class="card-title" id="how-to_card-title">Deck Feed Section!</h5>
+              <hr>
+              <p class="card-text" id="how-to_card-text">
+                After you have followed multiple users, you will notice that your Deck Feed now shows more posts than
+                what you have created! You will be able to see what other OctaneDeck users have posted on their page, and
+                you can also comment on them too! Get out there and make friends to build your feed!<br/>
+                <i><u><b>PLEASE NOTE: We have removed user images &amp; usernames for privacy protection! We understand there
+                  will be arguments, and to avoid conflict of interests and hate speech, we have removed these to protect the
+                  identity of those who comment.</b></u></i>
+              </p>
+              <%= link_to 'Edit Your Deck', edit_user_path(current_user), class: 'btn btn-lg btn-outline-danger' %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr id="how-to_line-break">
+  <div class="container-xxl" id="how-to_vision-box">
+    <h1 id="how-to_vision-title">Creating Posts & Commenting!</h1><br/>
+    <div class="container">
+      <div class="row align-items-start">
+        <div class="col">
+          <div class="card" style="width: 100%;">
+            <%= image_tag('deck_post_create.png', class: 'card-img-top', alt: 'Finding Other Deck Users!') %>
+            <div class="card-body" style="padding: 15px;">
+              <h5 class="card-title" id="how-to_card-title">Creating A Post!</h5>
+              <hr>
+              <p class="card-text" id="how-to_card-text">
+                From your profile page, creating a new post is really easy. Navigate to the
+                top left section underneath your profile avatar. You will see;<br/>
+                Following | Follwers<br/>
+                And then a section that allows you to create a new post!<br/>
+                Here you can add your post content words, as well as adding an
+                image to your post if desired! <br/>
+                Once you have completed composing your new post, click on the button "Post".
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card" style="width: 100%;">
+            <%= image_tag('deck_feed_post_created.png', class: 'card-img-top', alt: 'Follow Deck Profile!') %>
+            <div class="card-body" style="padding: 15px;">
+              <h5 class="card-title" id="how-to_card-title">Viewing Your Post!</h5>
+              <hr>
+              <p class="card-text" id="how-to_card-text">
+                After you have successfully created your new post, it will appear in the "Deck Feed". You will notice
+                that your "Deck Feed (1)" has increased by 1 each time you make a post. This allows you to easily
+                see how many posts you have created! If you look underneath your post, you will see a section that
+                allows you to know when you created your post, as well as delete the post. <br/>
+                <i><u><b>PLEASE NOTE: You must be the post creator to delete posts!</b></u></i>
+                <br/>
+                Now that you know how to create a new post, go ahead and give it a try!
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card" style="width: 100%;">
+            <%= image_tag('comment_view.png', class: 'card-img-top', alt: 'Deck Feed!', style: 'height: 226px;') %>
+            <div class="card-body" style="padding: 15px;">
+              <h5 class="card-title" id="how-to_card-title">Making Comments!</h5>
+              <hr>
+              <p class="card-text" id="how-to_card-text">
+                Anyone has the ability to create comments now, and we encourage everyone to do so! Commenting on
+                other peoples posts is a great way to stay active with your friends and loved ones. <br/>
+                You can easily create a new comment by typing inside the "Leave a Comment!" box and then clicking on "Reply". <br/>
+                Once you have done that, underneath the Reply button, you will see your comment has been created. You will also see
+                there is another "Reply to Comment!" section that allows others to comment on your comment.
+                <i><u><b>PLEASE NOTE: We have removed user images &amp; usernames for privacy protection! We understand there
+                  will be arguments, and to avoid conflict of interests and hate speech, we have removed these to protect the
+                  identity of those who comment.</b></u></i>
+              </p>
             </div>
           </div>
         </div>

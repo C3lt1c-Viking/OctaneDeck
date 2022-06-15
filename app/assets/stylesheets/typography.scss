@@ -126,9 +126,10 @@ font-family: 'VT323', monospace;
 
 #usr_title
 {
-  font-family: 'Press Start 2P', cursive;
+  font-family: 'Orbitron', sans-serif;
   color: #000;
   text-transform: capitalize;
+  font-size: 15px;
 }
 
 .cnt_title
@@ -147,14 +148,14 @@ font-family: 'VT323', monospace;
 
 #cnt_link
 {
-  font-family: 'VT323', monospace;
+  font-family: 'Orbitron', sans-serif;
   color: #0F0;
   font-size: 25px;
 }
 
 #cnt_link:hover
 {
-  font-family: 'Special Elite', cursive;
+  font-family: 'Orbitron', sans-serif;
   color: #00F;
   cursor: crosshair;
   font-size: 28px;
@@ -169,7 +170,7 @@ font-family: 'VT323', monospace;
 {
   font-family: 'Gentium Plus', serif;
   font-size: 26px;
-  color: #FFF;
+  color: #000;
 }
 
 #mnu_btn

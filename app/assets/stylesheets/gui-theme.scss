@@ -23,10 +23,10 @@
 
 .abt_box
 {
-  background-color: rgba(0,0,0,0.8);
-  box-shadow: 15px 15px 18px #00F;
+  background-color: rgba(255,255,255,0.8);
+  box-shadow: 15px 15px 18px #000;
   border: 5px solid #0F0;
-  margin-top: 10px;
+  margin-top: 30px;
 }
 
 .cnt_box
@@ -34,7 +34,7 @@
   background-color: rgba(0,0,0,0.8);
   box-shadow: 15px 15px 18px #00F;
   border: 5px solid #0F0;
-  margin-top: 10px;
+  margin-top: 30px;
 }
 
 .nav_gui
@@ -43,7 +43,7 @@
   border: 2px solid #0F0;
 }
 
-.usr_box
+#usr_box
 {
   background-color: rgba(255,255,255,0.8);
   box-shadow: 15px 15px 18px #00F;
@@ -52,11 +52,21 @@
   padding: 15px;
 }
 
-.usr_inp
+#usr_inp
 {
   border: 2px double #0F0;
   background-color: #000;
   color: #0F0;
   padding: 8px;
-  font-family: 'Black Ops One', cursive;
+  font-size: 10px;
+  font-family: 'Audiowide', cursive;
+}
+#dec_editor_banner
+{
+  font-family: 'Source Code Pro', monospace;
+  font-size: 50px;
+  color: #FFF;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #00F;
+  text-shadow: 10px 10px 10px #000;
 }

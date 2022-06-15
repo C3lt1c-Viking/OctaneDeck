@@ -8,9 +8,9 @@ class MicropostsController < ApplicationController
     @micropost.image.attach(params[:micropost][:image])
     if @micropost.save
       flash[:success] = "Micropost created!"
-      redirect_to root_path
+      redirect_to current_user
     else
-      render 'static_pages#home', status: :unprocessable_entity
+      render 'users/show', status: :unprocessable_entity
     end
   end
 
@@ -18,7 +18,7 @@ class MicropostsController < ApplicationController
     @micropost.destroy
     flash[:success] = "Micropost deleted"
     if request.referrer.nil? || request.referrer == microposts_url
-      redirect_to root_url, status: :see_other
+      redirect_to current_user, status: :see_other
     else
       redirect_to request.referrer, status: :see_other
     end

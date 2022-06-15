@@ -10,9 +10,9 @@ class CommentsController < ApplicationController
       @commentable.comments.build(comment_params)
       if @commentable.save
         flash[:success] = "Comment created!"
-        redirect_to root_path
+        redirect_to current_user
       else
-        render 'static_pages#home', status: :unprocessable_entity
+        render 'users/show', status: :unprocessable_entity
       end
     end
 
