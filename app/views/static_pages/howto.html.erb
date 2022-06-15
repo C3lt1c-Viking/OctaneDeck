@@ -1,0 +1,126 @@
+<% provide(:title, "How To") %>
+<div class="container-xxl" id="how-to_box">
+  <h1 id="how-to_title">OctaneDeck Self-Help Guide</h1>
+  <div class="container">
+    <div class="row align-items-start">
+      <div class="col">
+        <div class="card" style="width: 100%;">
+          <%= image_tag('connecting_the_world.jpg', class: 'card-img-top', alt: 'Connecting The World!') %>
+          <div class="card-body" style="padding: 15px;">
+            <h5 class="card-title" id="how-to_card-title">Connecting The World</h5>
+            <hr>
+            <p class="card-text" id="how-to_card-text">
+              Connect with your frieds &amp; loved ones with ease! Create posts,
+              make comments, and follow each other! All with protection &amp; Privacy!
+            </p>
+            <%= link_to 'Create Your Deck', signup_path, class: 'btn btn-lg btn-outline-success' %>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card" style="width: 100%;">
+          <%= image_tag('coinbase.png', class: 'card-img-top', alt: 'Utilizing Blockchain Technologies!') %>
+          <div class="card-body" style="padding: 15px;">
+            <h5 class="card-title" id="how-to_card-title">Coinbase Technologies</h5>
+            <hr>
+            <p class="card-text" id="how-to_card-text">
+              Using Coinbase API keys in order to connect your wallets and be able to send/recieve
+              cryptocoins from inside your deck!
+            </p>
+            <%= link_to 'Register Coinbase', 'https://accounts.coinbase.com/pick-your-account?origin=coinbase.com', class: 'btn btn-lg btn-outline-primary', target: '_blank' %>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card" style="width: 100%;">
+          <%= image_tag('privacy.jpg', class: 'card-img-top', alt: 'Social Media Privacy', style: 'height: 226px;') %>
+          <div class="card-body" style="padding: 15px;">
+            <h5 class="card-title" id="how-to_card-title">Privacy &amp; Anti-Tracking</h5>
+            <hr>
+            <p class="card-text" id="how-to_card-text">
+              We value everyone's privacy. And we believe that where you are in the world, that
+              is your business, not the governments, not the political campaigns, not even us!
+            </p>
+            <%= link_to 'Access Your Deck', login_path, class: 'btn btn-lg btn-outline-success' %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr id="how-to_line-break">
+  <div class="container-xxl" id="how-to_vision-box">
+    <h1 id="how-to_vision-title">OctaneDeck Vision</h1><br/>
+    <br/>
+    <p id="how-to_vision-text">
+      The creator of OctaneDeck <%= link_to '(C3lt1cViking)', 'https://twitter.com/C3lt1cViking', target: '_blank', style: 'color: #00F;' %> has a vision to create a new social
+      media website that does not track or harvest your data. The world is saturated
+      with other social media sites that includes LinkedIn, Facebook, Twitter, etc. and
+      they all track your cookies, offline activities, GPS tracking, and more.
+      With CryptoDeck, you get raw unrestricted social media aspect just like Tom Anderson (Founder of MySpace)
+      had intended it to be.<br/>
+      However, we want to twist things up a little bit...<br/>
+      With the rise of cryptocurrencies and blockchains, we also want to share that option with everyone.
+      By investing time &amp; resources into CryptoDeck, we are looking into "Tipping" each other
+      with cryptocoins. Not all accounts will be subjected to this, and we will discuss this more in a few moments.
+      On top of that, we also provide "Badges" for users as well to help promote each other!<br/>
+      And this is where we brought in another developer to assist in speeding up the process! With
+      another developer <%= link_to "(GhostKanyi)", 'https://twitter.com/ghostkanyi', target: '_blank', style: 'color: #00F;' %> on board, we have the ability to be able to create and publish
+      OctaneDeck much faster. Thus allowing users to be able to utilize our social media site as soon
+      as possible!
+    </p>
+  </div>
+  <hr id="how-to_line-break">
+  <div class="container-xxl" id="how-to_vision-box">
+    <h1 id="how-to_vision-title">Create Your OctaneDeck Account</h1><br/>
+    <br/>
+    <div class="container">
+      <div class="row align-items-start">
+        <div class="col">
+          <div class="card" style="width: 100%;">
+            <%= image_tag('new_user_page.png', class: 'card-img-top', alt: 'Creating A New Deck!') %>
+            <div class="card-body" style="padding: 15px;">
+              <h5 class="card-title" id="how-to_card-title">Creating New Deck!</h5>
+              <hr>
+              <p class="card-text" id="how-to_card-text">
+                Fill out your desired;<br/>
+                Username <br/>
+                Email <br/>
+                Password<br/>
+                And confirm your password too.<br/>
+                <i><strong>Please Note:</strong> You need a valid EMAIL for registration activation!</i>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card" style="width: 100%;">
+            <%= image_tag('coinbase.png', class: 'card-img-top', alt: 'Utilizing Blockchain Technologies!') %>
+            <div class="card-body" style="padding: 15px;">
+              <h5 class="card-title" id="how-to_card-title">Coinbase Technologies</h5>
+              <hr>
+              <p class="card-text" id="how-to_card-text">
+                Using Coinbase API keys in order to connect your wallets and be able to send/recieve
+                cryptocoins from inside your deck!
+              </p>
+              <%= link_to 'Register Coinbase', 'https://accounts.coinbase.com/pick-your-account?origin=coinbase.com', class: 'btn btn-lg btn-outline-primary', target: '_blank' %>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card" style="width: 100%;">
+            <%= image_tag('privacy.jpg', class: 'card-img-top', alt: 'Social Media Privacy', style: 'height: 226px;') %>
+            <div class="card-body" style="padding: 15px;">
+              <h5 class="card-title" id="how-to_card-title">Privacy &amp; Anti-Tracking</h5>
+              <hr>
+              <p class="card-text" id="how-to_card-text">
+                We value everyone's privacy. And we believe that where you are in the world, that
+                is your business, not the governments, not the political campaigns, not even us!
+              </p>
+              <%= link_to 'Access Your Deck', login_path, class: 'btn btn-lg btn-outline-success' %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

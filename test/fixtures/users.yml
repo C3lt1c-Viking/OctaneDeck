@@ -1,0 +1,47 @@
+celtic:
+  first_name: Celtic
+  last_name: Viking
+  username: C3lt1cViking
+  email: c3lt1cviking@tuta.io
+  hobbies: Hacking | Coding | Family Time
+  job_title: Ruby on Rails Engineer
+  job_company: C3lt1c Viking Operations
+  highest_education: Doctor of Computer Science
+  crypto_wallet_1: abc123
+  crypto_wallet_2: abc321
+  crypto_wallet_3: a1b2c3
+  facebook: https://www.facebook.com/
+  twitter: https://twitter.com/C3lt1cViking
+  github: https://github.com/C3lt1c-Viking
+  stackoverflow: https://stackoverflow.com/users/19276054/c3lt1cviking
+  other_site: https://www.c3lt1cviking.com
+  cell: 888-055-8850
+  marital_status: Married
+  sex: Robot
+  interested_in: Friends
+  admin: true
+  activated: true
+  activated_at: <%= Time.zone.now %>
+
+angel:
+  first_name: Angel
+  last_name: Wisdom
+  username: AngelOfWisdom
+  email: 4ng3l@wisdom.com
+  hobbies: Photography | Family
+  job_title: Mother
+  job_company: Stay at Home
+  highest_education: Associates
+  crypto_wallet_1: a1c3b2
+  crypto_wallet_2: ac12b3
+  crypto_wallet_3: ab123c
+  facebook: https://www.facebook.com/
+  twitter: https://www.twitter.com/
+  github: https://www.github.com/
+  stackoverflow: https://www.stackoverflow.com/
+  other_site: https://www.4ng3lofwisdom.com
+  cell: 888-555-0588
+  marital_status: Married
+  sex: Female
+  interested_in: Friends
+  activated: false

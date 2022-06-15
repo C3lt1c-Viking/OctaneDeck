@@ -1,0 +1,10 @@
+<%= form_with(model: @micropost) do |f| %>
+  <%= render 'shared/error_messages', object: f.object %>
+  <div class="field">
+    <%= f.text_area :content, placeholder: "Compose New Deck Feed..." %>
+  </div>
+  <span class="image">
+    <%= f.file_field :image, accept: "image/jpeg, image/gif, image/png, image/jpg, image/eps, image/ai, image/pdf, image/gif, image/tiff, image/psd, image/indd, image/raw" %>
+  </span>
+  <%= f.submit "Post", class: "btn btn-success" %>
+<% end %>

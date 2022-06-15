@@ -1,0 +1,85 @@
+<% provide(:title, "Admin") %>
+<div class="container-fluid" style="background-color: rgba(0,0,0,0.8); border: 4px solid #0F0; box-shadow: 10px 10px 15px #00F;">
+  <div class="row">
+    <nav class="col-md-2 d-none d-md-block bg-light sidebar" style="background-color: #FFF;">
+      <div class="sidebar-sticky">
+        <ul class="nav flex-column">
+          <br/>
+          <li class="nav-item">
+            <button class="btn btn-lg btn-success" onclick="eagleEye()">
+              Eagle Eye
+            </button>
+          </li>
+          <br/>
+          <li class="nav-item">
+            <button class="btn btn-lg btn-warning" onclick="cryptoDonation()">
+              Donations
+            </button>
+          </li>
+          <br/>
+        </ul>
+    </div>
+  </nav>
+   <div id="EagleEye" style="display: none">
+     <h1 class="admin_users">
+       Total Number of Users ~ <%= User.count %><br/>
+       <hr>
+       <%= will_paginate @users %>
+       <% @users.each do |user| %>
+         <li>
+           <% if user.avatar.attached? %>
+             <%= image_tag user.avatar, style: 'width: 95px; height: 95px; border-radius: 75%', alt: user.username %>
+           <% else %>
+             <%= image_tag('crypto.jpg', style: 'width: 95px; height: 95px; border-radius: 75%', alt: 'Profile Image') %>
+           <% end %>
+           <%= link_to user.username, user, id: 'show_user_uname' %>
+           <% if current_user.admin? && !current_user?(user) %>
+             | <%= link_to "delete", user, method: :delete,
+                                           data: { confirm: "You sure?" } %>
+           <% end %>
+         </li>
+       <% end %>
+       <%= will_paginate @users %>
+      </h1>
+   </div>
+   <div id="Donations" style="display: none">
+     <h1 class="admin_users">
+       Total Donations Counted:<br/>
+       BitCoin Donations ~ *Use Coinbase API Keys to Pull Data*<br/>
+       Dogecoin Donations ~ *Use Coinbase API Keys to Pull Data*<br/>
+       Ethereum Donations ~ *Use Coinbase API Keys to Pull Data*<br/>
+     </h1>
+   </div>
+  </div>
+</div>
+
+<script>
+
+  function eagleEye()
+  {
+    var e = document.getElementById("EagleEye");
+    if (e.style.display === "none")
+    {
+      e.style.display = "block";
+      document.getElementById("Donations").style.display = "none";
+    }
+    else
+    {
+      e.style.display = "none";
+    }
+  }
+
+  function cryptoDonation()
+  {
+    var d = document.getElementById("Donations");
+    if (d.style.display === "none")
+    {
+      d.style.display = "block";
+      document.getElementById("EagleEye").style.display = "none";
+    }
+    else
+    {
+      d.style.display = "none";
+    }
+  }
+</script>

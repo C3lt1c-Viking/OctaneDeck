@@ -1,0 +1,23 @@
+<% provide(:title, "Log in") %>
+<div class="row usr_box" style="margin-top: 50px;">
+  <h1 class="usr_banner">Deck Login</h1>
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_with(url: login_path, scope: :session) do |f| %>
+
+      <%= f.label :email, id: 'usr_title' %><br/>
+      <%= f.email_field :email, class: 'form-control usr_inp' %><br/>
+      <br/>
+      <%= f.label :password, id: 'usr_title' %><br/>
+      <%= f.password_field :password, class: 'form-control usr_inp' %><br/>
+      <br/>
+      <%= f.label :remember_me, class: "checkbox inline" do %><br/>
+        <%= f.check_box :remember_me %>
+        <span>Remember me on this computer</span>
+      <% end %><br/>
+      <br/>
+      <%= f.submit "Log in", class: "btn btn-lg btn-outline-success" %>
+    <% end %>
+    <br/>
+    <p>New user? <%= link_to "Deck Creator!", signup_path, class: 'btn btn-lg btn-outline-success' %> <%= link_to "(forgot password)", new_password_reset_path, class: 'btn btn-lg btn-danger' %></p>
+  </div>
+</div>

@@ -1,0 +1,92 @@
+<% if logged_in? %>
+  <div class="row" style="margin-top: 50px;">
+    <aside class="col-md-4" style="background-color: rgba(0,0,0,0.8); color: #00F; border: 2px solid #0F0;">
+      <section class="user_info">
+        <%= render 'shared/user_info' %>
+      </section>
+      <section class="stats">
+        <%= render 'shared/stats' %>
+      </section>
+      <section class="micropost_form">
+        <%= render 'shared/micropost_form' %>
+      </section>
+    </aside>
+    <div class="col-md-8" style="background-color: rgba(0,0,0,0.8); border: 3px solid #00F; box-shadow: 4px 4px 8px #0F0;">
+      <h3 style="color: #FFF; font-size: 28px; text-shadow: 5px 5px 8px #0F0;">Deck Feed</h3>
+      <%= render 'shared/feed' %>
+    </div>
+  </div>
+<% else %>
+
+<main role="main" style="margin-top: 35px;">
+  <div class="jumbotron" id="hme_box_theme">
+    <div class="container">
+      <h1 class="display-3" id="hme_box_text">Hello WOrld</h1>
+      <p id="hme_p_text">
+        A brand new <strong>Out-Of-This-World</strong> social media website with treats!<br/>
+        <br/>
+        Please note, all cryptocurrencies &amp; transactions are carried out with Coinbase! Get <strong>$10.00 USD FREE</strong> when you register with our <%= link_to "Coinbase Promo Code", "https://www.coinbase.com/join/VFTNE1", target: "_blank" %>
+      </p>
+      <p style="margin: 0 auto; text-align: center;">
+        <%= link_to "Create Your OctaneDeck Now!", signup_path, class: 'btn btn-lg btn-outline-success', style: 'cursor: crosshair' %> <%= link_to "Log Into Your OctaneDeck Now!", login_path, class: 'btn btn-lg btn-outline-primary', style: 'cursor: cell' %>
+      </p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4" id="home_containers"><br/>
+        <%= image_tag('cybersecurity.jpg', style: 'width: 100%; height: 350px;', alt: 'Cybersecurity Privacy!') %><br/>
+        <br/>
+      </div>
+      <div class="col-md-4" id="home_containers"><br/>
+        <%= image_tag('digital_map.jpg', style: 'width: 100%; height: 350px;', alt: 'Digital Privacy!') %><br/>
+        <br/>
+      </div>
+      <div class="col-md-4" id="home_containers"><br/>
+        <%= image_tag('web3.jpg', style: 'width: 100%; height: 350px;', alt: 'Web3 Blockchain Support!') %><br/>
+        <br/>
+      </div>
+    </div>
+  </div>
+  <div class="container" style="margin-bottom: 50px;">
+    <div class="row">
+      <div class="col-md-4" id="home_containers1">
+        <h2 id="home_containers_header">Privacy</h2>
+        <p id="home_containers_text">
+          <strong>OctaneDeck</strong> is more than just another gimic social media site. We value privacy &amp; anonymity.
+          We can express this by;<br/>
+          * Limited Cookies!<br/>
+          * 0-Tracking Code!<br/>
+          * No IP logging!<br/>
+          * No GPS Tracking!<br/>
+          * No Cookie Harvesting!<br/>
+        </p>
+      </div>
+      <div class="col-md-4" id="home_containers1">
+        <h2 id="home_containers_header">Blockchain</h2>
+        <p id="home_containers_text">
+
+          <strong>OctaneDeck</strong> is the worlds first blockchain supportive social media site!<br/>
+          * Allow users to "Tip" each other with cryptocoins!<br/>
+          * Access our built-in NFT market place!<br/>
+          * Send/Recieve Cryptocoins to each other!<br/>
+          * Access Your Coinbase Wallet!<br/>
+        </p>
+      </div>
+      <div class="col-md-4" id="home_containers1">
+        <h2 id="home_containers_header">Extras</h2>
+        <p id="home_containers_text">
+          <strong>OctaneDeck</strong> also aims to ensure user satisfaction. And to do that, we have setup generic social media standards. However, we have a
+          twist where you can also;<br/>
+          * Buy/Sell NFT's<br/>
+          * Send/Recieve Cryptocoins<br/>
+          * Tip Influencers<br/>
+          * Tab Crypto Mining<br/>
+        </p>
+      </div>
+    </div>
+  </div>
+
+</main>
+<% end %>

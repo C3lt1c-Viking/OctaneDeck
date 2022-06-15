@@ -1,0 +1,107 @@
+/* typography */
+
+/* Google Fonts;
+font-family: 'Audiowide', cursive;
+font-family: 'Black Ops One', cursive;
+font-family: 'Blaka Hollow', cursive;
+font-family: 'Electrolize', sans-serif;
+font-family: 'Gentium Plus', serif;
+font-family: 'Kdam Thmor Pro', sans-serif;
+font-family: 'Monoton', cursive;
+font-family: 'Orbitron', sans-serif;
+font-family: 'Press Start 2P', cursive;
+font-family: 'Prompt', sans-serif;
+font-family: 'Quantico', sans-serif;
+font-family: 'Righteous', cursive;
+font-family: 'Source Code Pro', monospace;
+font-family: 'Special Elite', cursive;
+font-family: 'VT323', monospace;
+*/
+
+#how-to_box
+{
+  background-color: rgba(255,255,255,0.8);
+  padding: 25px;
+  margin-top: 50px;
+  border: 6px double #00F;
+  box-shadow: 16px 16px 14px #000;
+}
+#how-to_line-break
+{
+  color: #00F;
+}
+#how-to_card-title
+{
+  font-family: 'Orbitron', sans-serif;
+  color: #000;
+  font-size: 20px;
+}
+#how-to_card-text
+{
+  font-family: 'Electrolize', sans-serif;
+  font-size: 14px;
+  color: #000;
+}
+#how-to_vision-title
+{
+  font-family: 'Audiowide', cursive;
+  font-size: 60px;
+  color: #FFF;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #0F0;
+  text-shadow: 8px 8px 6px #000;
+}
+#how-to_vision-text
+{
+  font-family: 'Special Elite', cursive;
+  font-size: 20px;
+  text-align: left;
+  color: #000;
+}
+
+#home_containers
+{
+  background-color: #FFF;
+  text-align: center;
+  color: #000;
+}
+#home_containers1
+{
+  background-color: #C0C0C0;
+  text-align: center;
+  color: #000;
+  border: 2px solid #00F;
+}
+#home_containers_header
+{
+  font-family: 'Black Ops One', cursive;
+  font-size: 50px;
+}
+#home_containers_text
+{
+  font-family: 'Electrolize', sans-serif;
+  font-size: 15px;
+}
+
+#hme_box_theme
+{
+  background-color: #FFF;
+  border: 3px solid #000;
+  box-shadow: 13px 13px 10px #000;
+}
+
+#hme_box_text
+{
+  font-family: 'Audiowide', cursive;
+  color: #FFF;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: red;
+  text-shadow: 10px 10px 10px #000;
+}
+
+#hme_p_text
+{
+  font-family: 'Orbitron', sans-serif;
+  color: #000;
+  text-align: center;
+}

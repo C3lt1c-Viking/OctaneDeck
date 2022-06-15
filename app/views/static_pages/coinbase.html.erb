@@ -1,0 +1,45 @@
+<% provide(:title, "Coinbase") %>
+<div class="card">
+  <div class="card-body" style="background-color: #CC00FF">
+    <div style="height:540px; padding:0px; margin:0px; width: 100%;">
+      <iframe src="https://widget.coinlib.io/widget?type=chart&theme=light&coin_id=859&pref_coin_id=1505" width="100%" height="536px" scrolling="auto" marginwidth="0" marginheight="0" frameborder="0" border="0" style="border:0;margin:0;padding:0;line-height:14px;"></iframe>
+    </div>
+    <h5 class="card-title" style="text-align: center; color: #FFF; font-size: 35px;"><%= image_tag('btc_logo.png', style: 'height: 50px; width: 50px;', alt: 'Bitcoin Logo') %> Bitcoin Live Feed</h5>
+    <p class="card-text" style="text-align: center; color: #FFF; font-size: 35px;">My Wallet Address: <%= current_user.crypto_wallet_1 %></p>
+    <p class="card-text" style="text-align: center; color: #FFF; font-size: 35px;">My Wallet Value: <%= link_to current_user.crypto_wallet_1, 'https://www.blockchain.com/btc/address/' + current_user.crypto_wallet_1, target: '_blank', style: 'color: #00FFFF;' %></p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+<hr>
+<div class="row">
+  <div class="col-sm-6" style="background-color: #CC00FF; border: 3px solid #000"><br/>
+    <div class="card" style="margin: 0 auto">
+      <div style="height:250px; padding:0px; margin:0px; width: 450px; margin: 0 auto;">
+        <iframe src="https://widget.coinlib.io/widget?type=single_v2&theme=light&coin_id=280&pref_coin_id=1505" width="450" height="250px" scrolling="auto" style="border:0;padding:0;line-height:14px;"></iframe>
+      </div>
+      <div class="card-body">
+        <p class="card-text cb_text">
+          <%= image_tag('doge_logo.png', style: 'width: 35px; height: 35px;') %> Dogecoin Live Feed<br/>
+          My Wallet Address:<br/> <%= current_user.crypto_wallet_2 %><br/>
+          My Holdings: <br/><%= link_to current_user.crypto_wallet_2, 'https://www.blockchain.com/btc/address/' + current_user.crypto_wallet_2, target: '_blank', style: 'color: #00FFFF;' %>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6" style="background-color: #CC00FF; border: 3px solid #000"><br/>
+    <div class="card" style="margin: 0 auto">
+      <div style="height:250px; padding:0px; margin:0px; width: 450px; margin: 0 auto;">
+        <iframe src="https://widget.coinlib.io/widget?type=single_v2&theme=light&coin_id=145&pref_coin_id=1505" width="450" height="250px" scrolling="auto" style="border:0;padding:0;line-height:14px;"></iframe>
+      </div>
+      <div class="card-body">
+        <p class="card-text cb_text">
+          <%= image_tag('ethereum_logo.png', style: 'width: 35px; height: 35px;') %> Ethereum Live Feed<br/>
+          My Wallet Address:<br/> <%= current_user.crypto_wallet_3 %><br/>
+          My Holdings:<br/> <%= link_to current_user.crypto_wallet_3, 'https://www.blockchain.com/btc/address/' + current_user.crypto_wallet_3, target: '_blank', style: 'color: #00FFFF;' %>
+        </p>
+      </div>
+    </div>
+  </div>
+</div><br/>
+<br/>
+<br/>

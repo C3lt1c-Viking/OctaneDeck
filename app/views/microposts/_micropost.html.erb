@@ -1,0 +1,27 @@
+<li id="micropost-<%= micropost.id %>">
+  <% if micropost.user.avatar.attached? %>
+    <%= image_tag micropost.user.avatar, class: 'rounded-circle img-fluid', style: 'width: 50px; height: 50px; border-radius: 75%; border: 2px solid #FFF;', alt: 'User Profile Image' %>
+  <% else %>
+    <%= image_tag('crypto.jpg', class: 'rounded-circle img-fluid', style: 'width: 50px; height: 50px; border-radius: 75%; border: 2px solid #FFF;', alt: 'Profile Image') %>
+  <% end %>
+  <span class="user"><%= link_to micropost.user.username, micropost.user, style: 'color: #0F0; font-size: 15px' %></span>
+  <span class="content" style="color: #FFF; font-size: 25px;"><%= micropost.content %></span>
+  <% if micropost.image.attached? %>
+    <%= image_tag micropost.image.variant(:display) %>
+  <% end %>
+
+  <span class="timestamp" style="color: #0F0; font-size: 11px;">
+    Posted <%= time_ago_in_words(micropost.created_at) %> ago.
+    <% if current_user?(micropost.user) %>
+      <%= link_to "delete", micropost, data: { "turbo-method": :delete,
+                                               turbo_confirm: "You sure?" } %>
+    <% end %>
+  </span>
+  <ul>
+    <%= form_for [micropost, Comment.new] do |f| %>
+      <%= f.text_area :content, placeholder: "Add a Reply" %><br/>
+      <%= f.submit "Reply"  %>
+      <% end %>
+    <%= render partial: 'comments/comment', collection: micropost.comments %>
+  </ul>
+</li>

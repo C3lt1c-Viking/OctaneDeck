@@ -1,0 +1,47 @@
+<% if logged_in? %>
+  <div class="row">
+    <aside class="col-md-4" style="background-color: rgba(0,0,0,0.8); color: #00F; border: 2px solid #0F0;">
+      <section class="user_info">
+        <%= render 'shared/user_info' %>
+      </section>
+      <section class="stats">
+        <%= render 'shared/stats' %>
+      </section>
+      <section class="micropost_form">
+        <%= render 'shared/micropost_form' %>
+      </section>
+    </aside>
+    <div class="col-md-8" style="background-color: rgba(0,0,0,0.8); border: 3px solid #00F; box-shadow: 4px 4px 8px #0F0;">
+      <h3 style="color: #FFF; font-size: 28px; text-shadow: 5px 5px 8px #0F0;">Deck Feed</h3>
+      <%= render 'shared/feed' %>
+    </div>
+  </div>
+<% else %>
+
+<div class="center jumbotron hme_box">
+  <h1 class="hme_title" style="color: #FFF">Welcome to CryptoDeck</h1>
+
+  <h2 class="hme_text">
+    The developers of <i>CryptoDeck</i> aims to provide the first social media site in which
+    puts privacy &amp; control back to the end-users!<br/>
+    <br/>
+    <strong>CryptoDeck</strong> is also the first public site that allows cryptocurrencies to be interacted with.
+    We can accomplish this by;<br/>
+    * Allowing users to "Tab-Mine" cryptocurrencies!<br/>
+    * Allow users to "Tip" each other with cryptocoins!<br/>
+    * Access our built-in NFT market place!<br/>
+    <br/>
+    <strong>CryptoDeck</strong> is more than just another gimic social media site. We value privacy &amp; anonymity.
+    We can express this by;<br/>
+    * Limited Cookies!<br/>
+    * 0-Tracking Code!<br/>
+    * No IP logging!<br/><br/>
+    <br/>
+    Please note, all cryptocurrencies &amp; transactions are carried out with Coinbase! Get <strong>$10.00 USD FREE</strong> when you register with our <%= link_to "Coinbase Promo Code", "https://www.coinbase.com/join/VFTNE1", target: "_blank" %>
+  </h2>
+
+  <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-success" %>
+</div>
+
+<%= link_to image_tag("rails.svg", alt: "Rails logo", width: "200"), "https://rubyonrails.org/" %>
+<% end %>

@@ -1,0 +1,22 @@
+<% provide(:title, 'All users') %>
+
+<ul class="users" style="background-color: rgba(0,0,0,0.8); border: 5px solid #0F0; box-shadow: 10px 10px 15px #00F;">
+  <h1 class="users_title">Registered Decks</h1>
+  <%= will_paginate %>
+  <% @users.each do |user| %>
+    <li>
+      <% if user.avatar.attached? %>
+        <%= image_tag user.avatar, style: 'width: 95px; height: 95px; border-radius: 75%', alt: user.username %>
+      <% else %>
+        <%= image_tag('crypto.jpg', style: 'width: 95px; height: 95px; border-radius: 75%', alt: 'Profile Image') %>
+      <% end %>
+      <%= link_to user.username, user, id: 'show_user_uname' %>
+      <% if current_user.admin? && !current_user?(user) %>
+        | <%= link_to "delete", user, data: { "turbo-method": :delete,
+                                              turbo_confirm: "You sure?" } %>
+      <% end %>
+
+    </li>
+  <% end %>
+  <%= will_paginate %>
+</ul>

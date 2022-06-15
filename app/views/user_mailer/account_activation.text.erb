@@ -1,0 +1,15 @@
+<h1>CryptoDeck</h1>
+
+<p>Hi <%= @user.username %>,</p>
+
+<p>
+Welcome to CryptoDeck! <br/>
+The first ever social media site that;<br/>
+<strong>DOES NOT</strong> track and harvest cookies!<br/>
+<strong>DOES NOT</strong> track GPS locations!<br/>
+<strong>DOES NOT</strong> Spy on users<br/>
+
+Click on the link below to activate your account:
+</p>
+
+<%= link_to "Activate", edit_account_activation_url(@user.activation_token, email: @user.email) %>

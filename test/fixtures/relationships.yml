@@ -1,0 +1,15 @@
+one:
+  follower: celtic
+  followed: angel
+
+two:
+  follower: celtic
+  followed: malory
+
+three:
+  follower: angel
+  followed: celtic
+
+four:
+  follower: archer
+  followed: celtic
